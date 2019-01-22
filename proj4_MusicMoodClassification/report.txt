@@ -1,0 +1,74 @@
+
+Music Mood Classification
+
+Problem Statement 
+
+Music is an art form whose medium is sound organized in time. There are different types of music based on genre, mood, and occasion. I decided to build a deep learning application that can classify the emotion/mood of the music. 
+
+
+The aim here is to classify a given audio clip as one of 6 classes (Happy, Funny, Angry, Sad, Tender, Scary). I got the data from Google’s Audioset https://research.google.com/audioset/dataset/index.html
+Potential Solutions 
+
+1.	Convert audio to image and then classify 
+2.	Convert audio to tabular data and then classify
+
+Here the focus is on converting audio to image and classifying the audio
+
+Data Preparation 
+Get required data from google audioset – 
+
+1.	From class_labels_indices.csv, identify the id’s of the classes of interest (6 classes mentioned above).
+2.	An audio clip can belong to many classes (multi-label).
+3.	Count of audio files that belong to only 6 classes of interest– 11142
+
+Download from youtube – 
+
+4.	Download the 10 seconds audio files from you tube – Count 10449.  Few videos were not available anymore.
+5.	Save these to a csv – clips_metadata.csv
+
+Use Librosa and generate audio time series, sampling rate – 
+
+6.	Using librosa library generate audio time series and sample rate. 
+7.	Delete clips that are shorter than 10 seconds.
+8.	Count of audio files which to belong to only 6 classes and are 10 seconds – 10146
+9.	 Save this data in a dataframe (audio_analysis_df)
+
+Generate Spectrogram
+
+10.	Use Librosa to generate spectrogram. (I used matplotlib. Should have used Librosa)
+
+Generate input_label.csv based on the generated files (spectrogram files) 
+
+11.	Create a csv that has audio file name(no extension), and the label( Happy/sad etc)
+
+Generate Melspectrogram
+
+12.	Use Librosa to generate Melspectrogram
+
+Generate Tempogram
+
+13.	Use Librosa to generate tempo and beat_times
+14.	Use Librosa to generate  tempogram
+
+
+Training
+Accuracy with different architecture
+
+S.no	   Experiment	        Architecture	            Highest accuracy
+1	      Spectrogram	         Resnet34	                     61.85%
+2	      Melspectrogram	     Resnet34	                     65.16%
+3		                         Resnet50	                     66.84%
+4	      Tempogram	           Resnet50	                     51.5%
+5      	Melspectrogram	   Tempogram trained 
+                          model from (experiment4)	       64.4%
+
+
+Observation
+On looking at the confusion matrix of the above results, I found that most of the misclassification is attributed to ‘Tender’ class.
+A tender music is hard to classify. Happy/Sad music track can be classified as Tender.  Tender is an ambiguous emotion in itself. So I decided to remove tender files and try to classify only 5 classes (Happy, Funny, Sad, Angry, Scary)
+
+Training 
+
+S.no	Experiment	                             Architecture	     Highest accuracy
+5	  Melspectrogram without Tender class	        Resnet50	            79%
+6		                                            3 layer CNN	         61.11%
