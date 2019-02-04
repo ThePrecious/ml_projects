@@ -1,6 +1,6 @@
 # Machine Learning Projects
 
-**1. [House occupancy](../../proj1_house_occupancy_gluon.ipynb)**  - 
+**1. [House occupancy](./proj1_house_occupancy_gluon.ipynb)**  - 
 
 *Problem* - This is a binary classification problem where observation of environmental factors such as temperature and humidity is used to classify whether a room is occupied or not.
 
@@ -8,7 +8,7 @@
 
 *Result* - Recurrent neural network (LSTM) model to predict occupancy of a room, 98% accuracy on the test set compared to a baseline accuracy of 94% for a softmax classifier
 
-**2. [Seedling with CNN](../../proj2_cnn_plant_seedling.ipynb)**- 
+**2. [Seedling with CNN](./proj2_cnn_plant_seedling.ipynb)**- 
 
 *Problem* - This is a multiclass classification problem where an image of a plant seedling has to be classified as one of the 12 species.
 
