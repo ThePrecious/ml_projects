@@ -16,7 +16,7 @@
 
 *Result* - A simple CNN with accuracy around 70% 
 
-**3. [Seedling Classification with model tuning on Amazon SageMaker](../../sagemaker-seedling)** -
+**3. [Seedling Classification with model tuning on Amazon SageMaker](./sagemaker-seedling)** -
 
 *Problem* - This is a multiclass classification problem where an image of a plant seedling has to be classified as one of the 12 species.
 
@@ -24,7 +24,7 @@
 
 *Result* - Performed transfer learning (VGG19 model) and hyperparameter optimization using AWS Sagemaker (build your own container for Keras) and got an accuracy of 83.76%
 
-**4. [Music Mood Classification using Fast.ai and Pytorch](../../proj4_MusicMoodClassification)** [Work in Progress] -
+**4. [Music Mood Classification using Fast.ai and Pytorch](./proj4_MusicMoodClassification)** [Work in Progress] -
 
 Building a music mood classifier that classifies a music clip to one of 6 moods (happy, sad, angry, scary, funny, tender) by converting audio to image (Spectrogram, Melspectrogram, Tempogram) and using fastai library, transfer learning, pytorch to train the mode
 
