@@ -1,6 +1,6 @@
 # Machine Learning Projects
 
-**1. [House occupancy](./proj1_house_occupancy_gluon.ipynb)**  - 
+**1. [House occupancy](./1_House_Occupancy_Classification)**  
 
 *Problem* - This is a binary classification problem where observation of environmental factors such as temperature and humidity is used to classify whether a room is occupied or not.
 
@@ -8,7 +8,7 @@
 
 *Result* - Recurrent neural network (LSTM) model to predict occupancy of a room, 98% accuracy on the test set compared to a baseline accuracy of 94% for a softmax classifier
 
-**2. [Seedling with CNN](./proj2_cnn_plant_seedling.ipynb)**- 
+**2. [Seedling with CNN](./2_Plant_Seedling_Classification)**
 
 *Problem* - This is a multiclass classification problem where an image of a plant seedling has to be classified as one of the 12 species.
 
@@ -16,7 +16,7 @@
 
 *Result* - A simple CNN with accuracy around 70% 
 
-**3. [Seedling Classification with model tuning on Amazon SageMaker](./sagemaker-seedling)** -
+**3. [Seedling Classification with model tuning on Amazon SageMaker](./3_Sagemaker_Seedling)**
 
 *Problem* - This is a multiclass classification problem where an image of a plant seedling has to be classified as one of the 12 species.
 
@@ -24,7 +24,7 @@
 
 *Result* - Performed transfer learning (VGG19 model) and hyperparameter optimization using AWS Sagemaker (build your own container for Keras) and got an accuracy of 83.76%
 
-**4. [Music Mood Classification using Fast.ai and Pytorch](./proj4_MusicMoodClassification)** [Work in Progress] -
+**4. [Music Mood Classification using Fast.ai and Pytorch](./4_Music_Mood_Classification)** [Work in Progress]
 
 Building a music mood classifier that classifies a music clip to one of 6 moods (happy, sad, angry, scary, funny, tender) by converting audio to image (Spectrogram, Melspectrogram, Tempogram) and using fastai library, transfer learning, pytorch to train the mode
 
